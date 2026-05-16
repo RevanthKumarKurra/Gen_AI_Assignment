@@ -1,0 +1,71 @@
+Python OOPs Concepts
+Introduction to Object-Oriented Programming (OOP)
+
+
+Object-Oriented Programming, commonly called OOP or OOPS, is one of the most important programming paradigms used in Python and many other programming languages. The main idea behind OOP is to represent real-world entities as software objects so that programs become easier to design, understand, and maintain. In procedural programming, developers mostly focus on functions and execution flow, but in object-oriented programming the focus shifts toward objects and the relationships between them. This approach helps developers build large and scalable applications because everything can be organized into independent and reusable components. Real-world systems such as banking applications, hospital management systems, social media platforms, e-commerce websites, and artificial intelligence systems heavily rely on object-oriented principles because they make software more modular and maintainable.
+
+
+Class:- A class is the foundation of object-oriented programming. A class can be understood as a blueprint or template that defines the structure and behavior of objects. It describes what kind of data an object will contain and what actions that object can perform. For example, if we think about a “Student” class, it may contain attributes such as name, roll number, and marks, and methods such as study(), attend_class(), or write_exam(). A class itself does not occupy much memory because it only acts as a design. The actual memory allocation happens when objects are created from that class. In simple terms, a class defines the idea of something, while objects are the actual implementation of that idea.
+
+
+Object:- An object is an instance of a class. When a class is created, it only defines the structure, but when an object is created, that structure becomes a real entity in memory. Every object has its own state and behavior. For example, if “Student” is a class, then “Revanth” and “Rahul” can be two separate student objects with different names and marks. Objects allow programs to represent real-world entities naturally. This ability to model real-world systems is one of the biggest strengths of OOP. Objects interact with each other using methods, making the program organized and closer to human thinking.
+
+
+Attributes:- Attributes are variables associated with classes and objects. They are used to store data related to an object. Attributes can be instance attributes or class attributes. Instance attributes belong specifically to an object, meaning every object can have different values for them. For example, each student object can have a different name or mark. Class attributes, on the other hand, are shared across all objects of the class. If a school name is common for all students, it can be stored as a class attribute. Understanding the difference between instance and class attributes is important because it helps manage memory efficiently and ensures proper organization of shared and unique data.
+
+
+self Keyword:- The self keyword in Python is a very important concept in OOP. It refers to the current object that is calling a method. Whenever a method is invoked using an object, Python automatically passes that object as the first argument to the method, and this argument is usually named self. Through self, an object can access its own variables and methods. Without self, Python would not know which object’s data should be used. Beginners often find self confusing initially, but once understood, it becomes clear that self simply acts as a reference to the current object.
+
+
+Constructor:- The constructor is a special method used to initialize objects when they are created. In Python, the constructor is written using the __init__() method. Whenever an object is instantiated, the constructor runs automatically. Constructors are extremely useful because they allow developers to assign initial values to object variables without manually setting them every time. For example, when creating a bank account object, the constructor can automatically assign the account holder’s name and balance. Constructors make code cleaner, more readable, and easier to manage.
+
+
+Methods:- Methods are functions defined inside a class. They describe the behavior of objects. For example, a Car class may contain methods such as start_engine(), stop_engine(), or accelerate(). Methods allow objects to perform actions and interact with other objects. Python supports instance methods, class methods, and static methods. Instance methods work with object-specific data and use self. Class methods work with class-level data and use cls instead of self. Static methods are utility methods that do not depend on either instance or class variables. These different method types provide flexibility and help organize functionality properly.
+
+
+Encapsulation:- Encapsulation is one of the core principles of object-oriented programming. It refers to bundling data and methods together inside a class while restricting direct access to some details. The main purpose of encapsulation is to protect data from unintended modifications and ensure controlled access. In Python, encapsulation is achieved using public, protected, and private members. Public members can be accessed from anywhere, protected members are intended for internal use, and private members are strongly restricted using double underscores. Encapsulation improves security and prevents accidental misuse of data. For example, in a banking application, the balance should not be directly modified from outside the class because that could lead to incorrect transactions. Instead, deposit() and withdraw() methods should control how the balance changes.
+
+
+Inheritance:- Inheritance is another major concept in OOP and is considered one of the most powerful features. Inheritance allows one class to acquire the properties and methods of another class. The class being inherited from is called the parent class or base class, while the class inheriting those features is called the child class or derived class. Inheritance promotes code reuse because common functionality can be written once in the parent class and reused by multiple child classes. For example, if Animal is a parent class containing methods such as eat() and sleep(), then Dog and Cat classes can inherit these methods without rewriting them. This reduces duplication and makes maintenance easier. Python supports single inheritance, multiple inheritance, multilevel inheritance, hierarchical inheritance, and hybrid inheritance.
+
+
+super() Function:- The super() function is closely related to inheritance. It allows a child class to access methods and constructors of the parent class. This is especially useful when a child class wants to extend the functionality of the parent instead of completely replacing it. Using super() improves code readability and avoids directly referencing the parent class name, which helps maintain flexibility in larger systems.
+
+
+Polymorphism:- Polymorphism is a concept that allows the same method or operation to behave differently depending on the object being used. The word polymorphism means “many forms.” In Python, polymorphism is commonly achieved through method overriding and duck typing. Method overriding occurs when a child class provides its own implementation of a method already defined in the parent class. For example, an Animal class may define a sound() method, while Dog and Cat classes override it with barking and meowing behavior respectively. Polymorphism makes programs flexible because the same interface can support multiple implementations.
+
+
+Abstraction:- Abstraction is the concept of hiding internal implementation details and exposing only the necessary functionality to the user. In real life, people use cars without understanding every detail of the engine mechanism. Similarly, software users interact with systems without needing to know how everything works internally. Python supports abstraction using abstract classes and abstract methods through the abc module. Abstraction helps developers focus on what an object does rather than how it does it. This simplifies software complexity and improves maintainability.
+
+
+Magic Methods (Dunder Methods):- Magic methods, also called dunder methods because they contain double underscores, are special methods in Python that define object behavior for built-in operations. Methods such as __init__, __str__, __len__, and __add__ allow objects to integrate naturally with Python’s syntax and built-in functions. For example, __str__ controls how an object is displayed when printed, while __add__ defines how objects behave with the + operator. Magic methods make custom classes behave like built-in Python objects, which improves usability and readability.
+
+
+Operator Overloading:- Operator overloading is closely connected to magic methods. It allows operators such as +, -, *, and == to work with user-defined objects. For example, two vector objects can be added together using the + operator if the __add__ method is implemented. This capability allows developers to create intuitive and expressive code.
+
+
+Composition:- Composition is a design principle where one class contains objects of another class as part of its structure. Instead of inheriting functionality, a class uses other objects to achieve functionality. For example, a Car object may contain an Engine object. Composition creates strong relationships between classes and is often preferred over inheritance because it provides better flexibility and reduces dependency issues.
+
+
+Aggregation:- Aggregation is similar to composition but represents a weaker relationship between objects. In aggregation, objects can exist independently of each other. For example, an Employee object may be associated with a Department object, but if the employee is deleted, the department still exists. Aggregation is useful when objects should collaborate without having strict ownership relationships.
+
+
+Object Lifecycle:- The object lifecycle describes how objects are created, used, and destroyed. Python automatically manages memory through garbage collection, which removes unused objects from memory. Developers generally do not need to manually free memory as in some other programming languages. Python also provides a destructor method called __del__(), which is executed when an object is about to be destroyed. Although destructors are not commonly used, they can be useful for releasing external resources such as database connections or file handles.
+
+
+Method Resolution Order (MRO):- Method Resolution Order, commonly called MRO, defines the order in which Python searches for methods in inheritance hierarchies. This is especially important in multiple inheritance because a method may exist in multiple parent classes. Python uses the C3 linearization algorithm to determine the method lookup order. Understanding MRO is important for avoiding unexpected behavior in complex inheritance structures.
+
+
+Duck Typing:- Duck typing is a unique feature of Python that emphasizes behavior over type. The idea is based on the phrase, “If it looks like a duck and behaves like a duck, then it is a duck.” In Python, the exact type of an object is less important than whether it supports the required methods or behavior. This makes Python highly flexible and dynamic compared to strictly typed languages.
+
+
+Property Decorators:- Property decorators provide a clean way to control access to attributes. Using @property, developers can define getter, setter, and deleter methods while still accessing variables like normal attributes. This improves encapsulation and allows validation logic to be added transparently.
+
+
+Data Classes:- Data classes were introduced in Python to simplify the creation of classes mainly used for storing data. By using the @dataclass decorator, Python automatically generates methods such as __init__, __repr__, and __eq__. This reduces boilerplate code and makes classes cleaner and easier to read.
+
+
+SOLID Principles:- SOLID principles are advanced object-oriented design principles that help developers build scalable and maintainable systems. These principles encourage proper separation of responsibilities, flexible designs, and reduced dependencies between components. Large software systems often become difficult to maintain if these principles are ignored. Understanding SOLID principles is important for becoming a professional software engineer.
+
+
+Importance of OOP:- Object-oriented programming is extremely valuable because it enables developers to write reusable, organized, and scalable code. Large applications become easier to manage because different components can be developed independently. Teams can collaborate more effectively because classes provide clear boundaries between functionalities. OOP also improves debugging, testing, and maintenance. Modern frameworks such as Django, Flask, FastAPI, TensorFlow, and PyTorch heavily use object-oriented principles. Therefore, mastering OOP is essential for becoming a strong Python developer and understanding advanced software engineering concepts.
